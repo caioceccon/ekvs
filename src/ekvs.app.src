@@ -1,0 +1,12 @@
+{application, ekvs,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { ekvs_app, []}},
+  {env, []}
+ ]}.
