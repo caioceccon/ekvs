@@ -5,8 +5,9 @@
   {registered, []},
   {applications, [
                   kernel,
-                  stdlib
+                  stdlib,
+                  cowboy
                  ]},
   {mod, { ekvs_app, []}},
-  {env, []}
+  {env, [{http_port, 8080}]}
  ]}.
