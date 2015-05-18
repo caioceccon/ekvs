@@ -18,7 +18,7 @@ get_by_id(Id) ->
     gen_server:call(dbserv, {id, Id}).
 
 list_all() ->
-    gen_server:call(dbserv, list).    
+    gen_server:call(dbserv, list).
 
 %%% Server functions
 init([]) -> {ok, orddict:new()}.
