@@ -3,14 +3,16 @@
 Because of a heroku limitation is not possible to try the TCP/UDP features because heroku only forward the port 80.
 
 ### Use a different ID ekvs, is already used by this application.
-
+    git clone https://github.com/caioceccon/ekvs
+    cd ekvs
     heroku login
     heroku create ekvs --stack cedar --buildpack https://github.com/archaelus/heroku-buildpack-erlang
     git push heroku master
 [http://ekvs.herokuapp.com/](http://ekvs.herokuapp.com/)
 
 ## Compilation
-    git clone repo
+    git clone https://github.com/caioceccon/ekvs
+    cd ekvs
     rebar get-deps compile
 
 ## Running
