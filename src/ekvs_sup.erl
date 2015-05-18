@@ -23,4 +23,8 @@ start_link() ->
 %% ===================================================================
 
 init([]) ->
-    {ok, { {one_for_one, 5, 10}, [?CHILD(ekvs_db, worker)]} }.
+    {ok, {{one_for_one, 5, 10},
+          [?CHILD(ekvs_db, worker),
+           ?CHILD(ekvs_telnetserv_sup, supervisor)]
+         }
+    }.
