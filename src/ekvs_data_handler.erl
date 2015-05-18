@@ -13,7 +13,7 @@ init(_Transport, _Req, []) ->
 terminate(_Reason, _Req, _State) ->
     ok.
 
-allowed_methods(Req, State) ->  
+allowed_methods(Req, State) ->
     {[<<"POST">>, <<"GET">>], Req, State}.
 
 content_types_accepted(Req, State) ->
@@ -45,7 +45,7 @@ data_handle(<<"/data/", Id/binary>>, <<"GET">>, Req, State) ->
 
 data_handle(<<"/data/", _Id/binary>>, <<"POST">>, Req, State) ->
     {ok, Bin, Req1} = cowboy_req:body(Req),
-    
+
     {Msg, Code} = case get_key_value(Bin) of
         {error, not_a_json} ->
             {io_lib:format("Is not a real Json:~p", [Bin]), 422};
