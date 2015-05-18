@@ -28,7 +28,9 @@ stop(_State) ->
 routes() ->
     [
      {'_', [
-            {"/", ekvs_handler, []}
+            {"/", ekvs_handler, []},
+            {"/data/:id", ekvs_data_handler, []},
+            {"/data/", ekvs_data_handler, []}
            ]}
     ].
 
