@@ -2,12 +2,12 @@
  [
   {description, ""},
   {vsn, "1"},
-  {registered, []},
+  {registered, [dbserv]},
   {applications, [
                   kernel,
                   stdlib,
                   cowboy
                  ]},
-  {mod, { ekvs_app, []}},
+  {mod, {ekvs_app, []}},
   {env, [{http_port, 8080}]}
  ]}.
