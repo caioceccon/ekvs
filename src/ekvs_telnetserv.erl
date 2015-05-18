@@ -19,7 +19,7 @@ init(Socket) ->
 
 handle_cast(accept, ListenSocket) ->
     {ok, AcceptSocket} = gen_tcp:accept(ListenSocket),
-    % emh_clientserv_sup:start_socket(),
+    ekvs_telnetserv_sup:start_socket(),
     send(AcceptSocket, ?SERVER_HELLO, []),
     {noreply, AcceptSocket}.
 
