@@ -37,8 +37,8 @@ The API only accepts json as application type.
 The Data resource has the the attributes key and value
 
     {
-      'key': "1",
-      'value: "My Value"
+      'key': '1',
+      'value': 'My Value'
     }
 
 The methods accepted are:
